@@ -6,25 +6,98 @@
     <title>Formulario</title>
 </head>
 <body>
-    <table>
-        <tr>
-        <form action="http://ncoge.com/phps/formulario.php" method="post"></form>
-            <td>
-                Nombre:
-                <input type="text" name="Nombre" value=""><br>
-                <br>
-                Apellidos:
-                <input type="text" name="Apellidos"><br><br>
-                Correo:
-                <input type="text" name="Correo"><br><br>
-                Hobbies
-                <textarea name="Hobbies" id="">Hobbies</textarea>
-            </td>
-        </form>
-            <td>
-            
-            </td>
-        </tr>
-    </table>
+<form action="http://ncoge.com/phps/formulario.php" method="post">
+        <table width="100%">
+            <tr valign="top">
+                <td width="60%">
+                    <fieldset>
+                        <legend><b>Datos personales:</b></legend>
+                        <p>
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" value="" size="40">
+                        </p>
+                        <p>
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" id="apellidos" name="apellidos" value="" size="40">
+                        </p>
+                        <p>
+                            <label for="correo">Correo:</label>
+                            <input type="email" id="correo" name="correo" value="" size="40">
+                        </p>
+                        <p>
+                            <label for="hobbies">hobbies</label>
+                            <textarea id="hobbies" name="hobbies" rows="4" cols="40"></textarea>
+                        </p>
+                    </fieldset>
+                </td>
+                <td width="40%">
+                    <fieldset>
+                        <legend><b>Idiomas</b></legend>
+                        <p>Puntúa tu nivel de idiomas de 1 a 5:</p>
+                        <p>
+                            <b>Inglés:</b> 
+                            1 <input type="radio" name="ingles" value="1" checked>
+                            2 <input type="radio" name="ingles" value="2">
+                            3 <input type="radio" name="ingles" value="3">
+                            4 <input type="radio" name="ingles" value="4">
+                            5 <input type="radio" name="ingles" value="5">
+                        </p>
+                        <p>
+                            <b>Francés:</b> 
+                            1 <input type="radio" name="frances" value="1" checked>
+                            2 <input type="radio" name="frances" value="2">
+                            3 <input type="radio" name="frances" value="3">
+                            4 <input type="radio" name="frances" value="4">
+                            5 <input type="radio" name="frances" value="5">
+                        </p>
+                        <p>
+                            <b>Alemán:</b> 
+                            1 <input type="radio" name="aleman" value="1" checked>
+                            2 <input type="radio" name="aleman" value="2">
+                            3 <input type="radio" name="aleman" value="3">
+                            4 <input type="radio" name="aleman" value="4">
+                            5 <input type="radio" name="aleman" value="5">
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend><b>Domino los siguientes programas:</b></legend>
+                        <table width="100%">
+                            <tr>
+                                <td align="center">
+                                    Writer: <input type="checkbox" name="programas[]" value="Writer" checked>
+                                </td>
+                                <td align="center">
+                                    Base: <input type="checkbox" name="programas[]" value="Base" checked>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    Calc: <input type="checkbox" name="programas[]" value="Calc">
+                                </td>
+                                <td align="center">
+                                    Impress: <input type="checkbox" name="programas[]" value="Impress">
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend><b>Trabajo con el siguiente Sistema Operativo:</b></legend>
+                        <select name="so">
+                            <option value="Linux" selected>Linux</option>
+                            <option value="Windows">Windows</option>
+                            <option value="MacOS">MacOS</option>
+                        </select>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <br>
+                    <input type="reset" value="Reiniciar">
+                    <input type="image" src="imagenes/enviar.png" alt="Enviar" width="50">
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
